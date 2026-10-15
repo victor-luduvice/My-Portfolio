@@ -18,9 +18,9 @@ export const siteContent = {
   },
   about: {
     eyebrow: "02 — SOBRE", title: "Trajetória e Expertise",
-    headline: "Desenvolvedor Full Stack | Fundador da Conect | ADS",
+    headline: "Desenvolvedor Full Stack | Fundador da Conect ",
     paragraphs: [
-      "Sou desenvolvedor Full Stack formado em Análise e Desenvolvimento de Sistemas. Tenho experiência modernizando ecossistemas digitais e migrando infraestrutura para arquiteturas de alta disponibilidade.",
+      "Sou desenvolvedor Full Stack com experiência modernizando ecossistemas digitais e migrando infraestrutura para arquiteturas de alta disponibilidade.",
       "Trabalho com Node.js (NestJS e Express), Java (Spring Boot), Python (FastAPI), Next.js e React, além de bancos relacionais e não relacionais. Busco equilibrar arquitetura, performance, UI/UX e uso consciente de IA para ganhar produtividade.",
       "Como fundador da Conect, conduzo projetos completos para clientes, do levantamento de requisitos à arquitetura e entrega técnica. No momento, aprofundo meus estudos em Back-end, Dados e IA aplicada.",
     ],
@@ -44,7 +44,7 @@ export const siteContent = {
         ], skills: ["TypeScript", "Node.js", "Next.js", "Monorepo", "DevOps"],
       },
       {
-        period: "AGO/2025 — ATUAL", role: "Fundador e Desenvolvedor", company: "Conect (projeto próprio)",
+        period: "AGO/2025 — ATUAL", role: "Fundador e Desenvolvedor", company: "Connect (projeto próprio)",
         description: "Soluções digitais para empresas, do levantamento de requisitos à entrega técnica.",
         highlights: [
           "Idealização e desenvolvimento de soluções digitais (sites, aplicativos e marketing) para donos de empresa, do levantamento de requisitos à entrega técnica.",
@@ -82,7 +82,7 @@ export const siteContent = {
     intro: "Produtos e experimentos construídos para resolver problemas reais com tecnologia.",
     items: [
       // TODO: substituir pelo projeto e links reais.
-      { title: "Conect", description: "Site institucional e apresentação dos serviços digitais da Conect.", technologies: ["Next.js", "TypeScript", "Tailwind CSS"], codeUrl: "#", demoUrl: "#", status: "Projeto pessoal", placeholder: true },
+      { title: "Connect", description: "Site institucional e apresentação dos serviços digitais da Connect.", technologies: ["Next.js", "TypeScript", "Tailwind CSS"], codeUrl: "#", demoUrl: "#", status: "Projeto pessoal", placeholder: true },
       // TODO: substituir quando o projeto estiver publicado.
       { title: "Plataforma financeira com IA", description: "Plataforma financeira com API, dados e recursos de inteligência artificial aplicada.", technologies: ["Node.js", "PostgreSQL", "IA"], codeUrl: "#", demoUrl: "#", status: "Em desenvolvimento", placeholder: true },
       // TODO: substituir pelo projeto e links reais.
