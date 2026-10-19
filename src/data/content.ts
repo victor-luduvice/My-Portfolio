@@ -46,7 +46,6 @@ export const siteContent = {
         period: "ABR/2026 — ATUAL", role: "Desenvolvedor Fullstack (Prestação de Serviços, Remoto)", company: "Progress BA",
         description: "Manutenção e evolução técnica contínua do ecossistema digital do cliente.",
         highlights: [
-          "Manutenção e evolução técnica contínua do ecossistema digital do cliente.",
           "Liderança na transição para arquitetura de Monorepo, unificando Backend e Frontend com Type Safety e acelerando o ciclo de entrega.",
           "Orquestração da migração da Vercel para Hostinger, garantindo 100% de disponibilidade operacional e redução de latência.",
         ], skills: ["TypeScript", "Node.js", "Next.js", "Monorepo", "DevOps"],
@@ -63,19 +62,18 @@ export const siteContent = {
         period: "MAR/2025 — SET/2025", role: "Call Center e Apoio em Desenvolvimento", company: "ServeLoja, Aracaju/SE",
         description: "Suporte técnico especializado e manutenção evolutiva do ecossistema digital institucional.",
         highlights: [
-          "Suporte técnico especializado e manutenção evolutiva do ecossistema digital institucional.",
           "Otimização de performance e resolução de débitos técnicos em produção.",
         ], skills: [],
       },
       {
         period: "MAI/2024 — AGO/2024", role: "Diretor de Arte (Remoto)", company: "Moringa Digital",
         description: "Direção técnica e criativa para projetos web.",
-        highlights: ["Direção técnica e criativa para projetos web, garantindo paridade entre design de alta fidelidade e implementação técnica."], skills: [],
+        highlights: [], skills: [],
       },
       {
         period: "FEV/2023 — AGO/2023", role: "Desenvolvedor Web Front-end (Estágio)", company: "DelBank, Aracaju/SE",
         description: "Desenvolvimento de interfaces responsivas e seguras para sistemas bancários web.",
-        highlights: ["Desenvolvimento de interfaces responsivas e seguras para sistemas bancários web."], skills: [],
+        highlights: [], skills: [],
       },
     ],
     educationTitle: "Formação e Cursos",
