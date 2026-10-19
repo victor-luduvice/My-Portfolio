@@ -5,9 +5,11 @@ import { useEffect, useState } from "react";
 import { siteContent } from "@/data/content";
 import { ThemeToggle } from "@/components/theme-toggle";
 
+/** `active` marca a seção atual; `menuOpen` controla o menu em telas pequenas. */
 export function SiteHeader() {
   const [active, setActive] = useState("inicio");
   const [menuOpen, setMenuOpen] = useState(false);
+  // Observa as seções para atualizar o link ativo durante a rolagem.
   useEffect(() => {
     const sections = siteContent.navigation.map(({ href }) => document.querySelector(href)).filter((section): section is Element => section !== null);
     const observer = new IntersectionObserver((entries) => {

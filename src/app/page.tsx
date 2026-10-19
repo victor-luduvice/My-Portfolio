@@ -1,3 +1,4 @@
+/** Página principal: monta as seções do portfólio na ordem em que aparecem. */
 import { FloatingWhatsApp } from "@/components/floating-whatsapp";
 import { SiteHeader } from "@/components/site-header";
 import { AboutSection } from "@/components/sections/about-section";
@@ -7,6 +8,7 @@ import { FooterSection } from "@/components/sections/footer-section";
 import { HeroSection } from "@/components/sections/hero-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
 
+/** Reúne navegação, conteúdo, rodapé e atalho flutuante de contato. */
 export default function Home() {
   return <><a className="skip-link" href="#conteudo">Pular para o conteúdo</a><SiteHeader /><main id="conteudo"><HeroSection /><AboutSection /><ExperienceSection /><ProjectsSection /><ContactSection /></main><FooterSection /><FloatingWhatsApp /></>;
 }

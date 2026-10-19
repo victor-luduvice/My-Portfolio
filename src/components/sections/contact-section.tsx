@@ -1,12 +1,15 @@
 "use client";
 
+/** Apresenta e-mail, redes sociais e chamada de conversa pelo WhatsApp. */
 import { Check, Copy, ExternalLink, Github, Linkedin, Mail } from "lucide-react";
 import { useState } from "react";
 import { Reveal } from "@/components/reveal";
 import { siteContent } from "@/data/content";
 
+/** `copied` controla a confirmação visual após copiar o endereço de e-mail. */
 export function ContactSection() {
   const [copied, setCopied] = useState(false);
+  /** Copia para a área de transferência; se não houver permissão, abre o e-mail. */
   async function copyEmail() {
     try { await navigator.clipboard.writeText(siteContent.contact.email); setCopied(true); window.setTimeout(() => setCopied(false), 1800); }
     catch { window.location.href = `mailto:${siteContent.contact.email}`; }

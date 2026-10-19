@@ -1,7 +1,9 @@
+/** Exibe a lista de projetos e seus links para repositórios e demonstrações. */
 import { ArrowUpRight, Github } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { siteContent } from "@/data/content";
 
+/** O número, textos e endereços dos cards vêm da lista central de projetos. */
 export function ProjectsSection() {
   return <section className="section-wrap section-block" id="projetos" aria-labelledby="projects-title"><Reveal>
     <p className="eyebrow"><span />{siteContent.projects.eyebrow}</p><div className="projects-heading"><div><h2 className="section-title" id="projects-title">{siteContent.projects.title}</h2><p>{siteContent.projects.intro}</p></div><span className="project-count">0{siteContent.projects.items.length} / CASES</span></div>

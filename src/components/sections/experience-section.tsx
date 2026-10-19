@@ -1,7 +1,9 @@
+/** Apresenta cargos, atividades, competências e cursos em ordem cronológica. */
 import { ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { siteContent } from "@/data/content";
 
+/** Histórico profissional, competências por função e formação acadêmica. */
 export function ExperienceSection() {
   return <section className="section-wrap section-block" id="experiencia" aria-labelledby="experience-title">
     <Reveal><p className="eyebrow"><span />{siteContent.experience.eyebrow}</p><h2 className="section-title" id="experience-title">{siteContent.experience.title}</h2></Reveal>

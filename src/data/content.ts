@@ -1,21 +1,26 @@
+/** Fonte única de textos, listas, endereços e metadados usados pelo portfólio. */
 export const siteContent = {
+  // Identidade e SEO: `siteUrl` também alimenta os metadados e arquivos de busca.
   name: "Victor Luduvice",
   firstName: "Victor",
   lastName: "Luduvice",
   role: "Desenvolvedor Full Stack",
   siteUrl: "https://victor-luduvice.vercel.app",
   description: "Portfólio de Victor Luduvice, desenvolvedor full stack com foco em back-end, dados e soluções digitais.",
+  // Cada href aponta para o id de uma seção e cada label é o texto exibido no menu.
   navigation: [
     { label: "Início", href: "#inicio" }, { label: "Sobre", href: "#sobre" },
     { label: "Experiência", href: "#experiencia" }, { label: "Projetos", href: "#projetos" },
     { label: "Contato", href: "#contato" },
   ],
+  // Conteúdo da abertura: eyebrow, resumo e rótulos dos botões.
   hero: {
     eyebrow: "01 — IDENTIDADE",
     subtitle: "DESENVOLVEDOR FULL STACK • BACK-END & DADOS • FUNDADOR DA CONECT",
     description: "Construo sistemas escaláveis, APIs robustas e soluções digitais do requisito à entrega.",
     primaryAction: "Ver projetos", secondaryAction: "Entrar em contato",
   },
+  // Biografia: eyebrow e title identificam a seção; paragraphs são seus textos.
   about: {
     eyebrow: "02 — SOBRE", title: "Trajetória e Expertise",
     headline: "Desenvolvedor Full Stack | Fundador da Conect ",
@@ -25,12 +30,15 @@ export const siteContent = {
       "Como fundador da Conect, conduzo projetos completos para clientes, do levantamento de requisitos à arquitetura e entrega técnica. No momento, aprofundo meus estudos em Back-end, Dados e IA aplicada.",
     ],
   },
+  // Grupos de tecnologia. Os nomes também são usados como chaves dos ícones.
   stacks: [
     { title: "Back-end", technologies: ["Python", "FastAPI", "Node.js", "NestJS", "Express", "Java", "Spring"] },
     { title: "Front-end", technologies: ["TypeScript", "JavaScript", "React", "Next.js", "Tailwind CSS"] },
     { title: "Bancos de dados", technologies: ["PostgreSQL", "MySQL", "MongoDB", "SQLite"] },
     { title: "Ferramentas e infraestrutura", technologies: ["Docker", "Linux", "Git", "AWS", "Vercel", "Render"] },
   ],
+  // Experiências usam período, cargo, empresa, descrição, destaques e competências.
+  // Formação usa título, instituição e período, que pode ficar vazio quando omitido.
   experience: {
     eyebrow: "03 — EXPERIÊNCIA", title: "Trajetória Profissional",
     items: [
@@ -77,6 +85,7 @@ export const siteContent = {
       { title: "Especialização Fullstack Next.js (83h)", institution: "Udemy", period: "" },
     ],
   },
+  // Cada projeto possui tecnologias, links de código/demo, situação e descrição.
   projects: {
     eyebrow: "04 — PROJETOS", title: "Projetos selecionados",
     intro: "Produtos e experimentos construídos para resolver problemas reais com tecnologia.",
@@ -88,6 +97,7 @@ export const siteContent = {
       { title: "API de Delivery FastAPI", description: "API para delivery de pizza com autenticação JWT, controle de acesso e gerenciamento de pedidos e itens.", technologies: ["Python", "FastAPI", "SQLAlchemy", "JWT", "SQLite"], codeUrl: "https://github.com/victor-luduvice/FastAPI", demoUrl: "#", status: "Projeto pessoal", placeholder: true },
     ],
   },
+  // Links de contato e textos usados nos botões, cartões e mensagens pré-preenchidas.
   contact: {
     eyebrow: "05 — CONTATO", title: "Vamos conversar", headline: "Construindo soluções e sistemas escaláveis.",
     description: "Tem um desafio ou uma ideia em mente? Vamos conversar sobre como tirar do papel.",
@@ -99,8 +109,10 @@ export const siteContent = {
   footer: "© 2026 Victor Luduvice — Desenvolvedor Full Stack",
 } as const;
 
+/** Total de tecnologias, calculado a partir de todos os grupos da stack. */
 export const technologyCount = siteContent.stacks.reduce((total, group) => total + group.technologies.length, 0);
 
+/** Calcula anos completos desde fevereiro de 2023; `asOf` permite informar outra data. */
 export function yearsOfExperience(asOf = new Date()) {
   const started = new Date(2023, 1, 1);
   let years = asOf.getFullYear() - started.getFullYear();

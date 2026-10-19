@@ -1,11 +1,13 @@
 "use client";
 
+/** Apresenta a biografia, retrato com fallback e ferramentas do dia a dia. */
 import Image from "next/image";
 import { useState } from "react";
 import { Reveal } from "@/components/reveal";
 import { StackGrid } from "@/components/stack-grid";
 import { siteContent } from "@/data/content";
 
+/** `photoUnavailable` troca a foto pelas iniciais caso o arquivo não carregue. */
 export function AboutSection() {
   const [photoUnavailable, setPhotoUnavailable] = useState(false);
   return <section className="section-wrap section-block" id="sobre" aria-labelledby="about-title">

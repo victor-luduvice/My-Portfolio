@@ -1,7 +1,9 @@
+/** Abertura visual do portfólio com atalhos para projetos e contato. */
 import { ArrowDown, ArrowUpRight, MoveUpRight } from "lucide-react";
 import { AnimatedNumber, Reveal } from "@/components/reveal";
 import { siteContent, technologyCount, yearsOfExperience } from "@/data/content";
 
+/** Apresentação inicial com nome, resumo, ações de navegação e indicadores. */
 export function HeroSection() {
   return <section className="hero section-wrap" id="inicio" aria-labelledby="hero-title"><div className="hero-layout"><div className="hero-copy"><Reveal>
     <p className="eyebrow"><span />{siteContent.hero.eyebrow}</p><p className="hero-kicker">PORTFÓLIO / 2026</p>
