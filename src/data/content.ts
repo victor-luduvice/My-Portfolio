@@ -85,8 +85,7 @@ export const siteContent = {
       { title: "Connect", description: "Site institucional e apresentação dos serviços digitais da Connect.", technologies: ["Next.js", "TypeScript", "Tailwind CSS"], codeUrl: "#", demoUrl: "#", status: "Projeto pessoal", placeholder: true },
       // TODO: substituir quando o projeto estiver publicado.
       { title: "Plataforma financeira com IA", description: "Plataforma financeira com API, dados e recursos de inteligência artificial aplicada.", technologies: ["Node.js", "PostgreSQL", "IA"], codeUrl: "#", demoUrl: "#", status: "Em desenvolvimento", placeholder: true },
-      // TODO: substituir pelo projeto e links reais.
-      { title: "API REST", description: "Projeto demonstrativo de API REST para explorar arquitetura e integração de serviços.", technologies: ["Node.js", "TypeScript", "REST"], codeUrl: "#", demoUrl: "#", status: "Projeto pessoal", placeholder: true },
+      { title: "API de Delivery FastAPI", description: "API para delivery de pizza com autenticação JWT, controle de acesso e gerenciamento de pedidos e itens.", technologies: ["Python", "FastAPI", "SQLAlchemy", "JWT", "SQLite"], codeUrl: "https://github.com/victor-luduvice/FastAPI", demoUrl: "#", status: "Projeto pessoal", placeholder: true },
     ],
   },
   contact: {
