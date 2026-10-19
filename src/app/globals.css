@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* Tokens de cor e superfície do tema escuro, usados pelas regras abaixo. */
 :root {
   color-scheme: dark;
   --background: #05070d; --surface: #0b1020; --raised: #0e1528;
@@ -8,6 +9,7 @@
   --primary: #2563eb; --primary-hover: #3b82f6; --highlight: #60a5fa;
   --glow: rgba(37,99,235,.25); --header-bg: rgba(5,7,13,.78); --grid-line: rgba(148,163,184,.035);
 }
+/* Sobrescreve os tokens quando o usuário seleciona o tema claro. */
 .light {
   color-scheme: light;
   --background: #f8fafc; --surface: #fff; --raised: #f1f5f9;
@@ -16,6 +18,7 @@
   --primary: #2563eb; --primary-hover: #1d4ed8; --highlight: #1d4ed8;
   --glow: rgba(37,99,235,.13); --header-bg: rgba(248,250,252,.82); --grid-line: rgba(71,85,105,.055);
 }
+/* Reset, fundo com textura, acessibilidade e largura padrão das seções. */
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 92px; }
 body {
@@ -37,6 +40,7 @@ button,a { -webkit-tap-highlight-color: transparent; }
 .eyebrow>span { width: 25px; height: 1px; background: var(--primary-hover); box-shadow: 0 0 12px var(--glow); }
 .skip-link { position: fixed; z-index: 100; top: 10px; left: 10px; transform: translateY(-160%); padding: 12px 16px; border-radius: 8px; color: #fff; background: var(--primary); }
 .skip-link:focus { transform: translateY(0); }
+/* Cabeçalho fixo, navegação, marca e controles compartilhados. */
 .site-header { position: fixed; z-index: 50; inset: 0 0 auto; border-bottom: 1px solid var(--border); background: var(--header-bg); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
 .header-inner { display: flex; width: min(1280px,calc(100% - 64px)); height: 76px; align-items: center; justify-content: space-between; margin: 0 auto; }
 .wordmark { color: var(--text); font-size: 20px; font-weight: 700; letter-spacing: -.06em; }
@@ -50,6 +54,7 @@ button,a { -webkit-tap-highlight-color: transparent; }
 .icon-button { display: inline-grid; width: 40px; height: 40px; place-items: center; border: 1px solid var(--border); border-radius: 12px; background: transparent; color: var(--muted); cursor: pointer; transition: color 180ms ease,border-color 180ms ease,background 180ms ease; }
 .icon-button:hover { border-color: var(--border-strong); color: var(--text); background: var(--surface); }
 .menu-toggle { display: none; }
+/* Abertura do site: apresentação, métricas e indicação de rolagem. */
 .hero { position: relative; display: flex; min-height: min(900px,100svh); flex-direction: column; justify-content: center; padding-top: 125px; padding-bottom: 86px; }
 .hero-layout { display: grid; grid-template-columns: minmax(0,1.2fr) minmax(240px,.8fr); align-items: center; gap: 7%; }
 .hero-kicker { margin: 34px 0 15px; color: var(--subtle); font-size: 10px; }
@@ -82,10 +87,10 @@ button,a { -webkit-tap-highlight-color: transparent; }
 .scroll-cue { position: absolute; bottom: 30px; left: 0; display: flex; align-items: center; gap: 12px; color: var(--subtle); font-size: 9px; }
 .scroll-cue svg { color: var(--highlight); }
 .section-title { margin: 18px 0 0; font-size: clamp(34px,5vw,55px); font-weight: 500; line-height: 1.08; letter-spacing: -.055em; }
+/* Biografia, retrato circular e grade de tecnologias. */
 .about-layout { display: grid; grid-template-columns: minmax(240px,.72fr) minmax(0,1.28fr); gap: clamp(40px,9vw,120px); align-items: center; margin-top: 54px; }
 .portrait-column { max-width: 370px; }
-.portrait-frame { position: relative; padding: 0 14px 14px 0; }
-.portrait-frame::before { position: absolute; z-index: -1; inset: 14px 0 0 14px; border: 1px solid var(--primary); border-radius: 50%; content: ""; }
+.portrait-frame { position: relative; }
 .portrait-image { position: relative; display: grid; aspect-ratio: 1; place-items: center; overflow: hidden; border: 1px solid var(--border-strong); border-radius: 50%; background: linear-gradient(145deg,var(--raised),var(--surface)); }
 .portrait-image::after { position: absolute; inset: 0; background: linear-gradient(0deg,rgba(5,7,13,.65),transparent 54%),linear-gradient(135deg,rgba(37,99,235,.13),transparent 54%); content: ""; pointer-events: none; }
 .portrait-photo { object-fit: cover; border-radius: 50%; filter: grayscale(1) contrast(1.08); }
@@ -128,6 +133,7 @@ button,a { -webkit-tap-highlight-color: transparent; }
 .education-item h3 { margin: 0; font-size: 13px; font-weight: 500; line-height: 1.5; }
 .education-item p { margin: 6px 0 0; color: var(--muted); font-size: 11px; }
 .education-period { color: var(--subtle); font-size: 8px; }
+/* Cartões de projetos e seus links de ação. */
 .projects-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; }
 .projects-heading>div>p { max-width: 520px; margin: 14px 0 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
 .project-count { padding-bottom: 7px; color: var(--subtle); font-size: 9px; white-space: nowrap; }
@@ -150,6 +156,7 @@ button,a { -webkit-tap-highlight-color: transparent; }
 .project-actions { display: flex; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 14px; border-top: 1px solid var(--border); }
 .project-actions a { display: inline-flex; align-items: center; gap: 7px; color: var(--muted); font-size: 11px; transition: color 160ms ease; }
 .project-actions a:hover { color: var(--highlight); }
+/* Contato, rodapé e atalhos sociais/flutuantes. */
 .contact-section { padding-bottom: 120px; }
 .contact-layout { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(300px,.9fr); gap: clamp(40px,9vw,120px); align-items: center; margin-top: 48px; }
 .contact-copy h3 { max-width: 550px; margin: 0; font-size: clamp(32px,4vw,49px); font-weight: 500; line-height: 1.1; letter-spacing: -.055em; }
@@ -173,6 +180,7 @@ button,a { -webkit-tap-highlight-color: transparent; }
 .footer-socials a:hover { border-color: var(--highlight); color: var(--highlight); }
 .whatsapp-float { position: fixed; z-index: 45; right: 24px; bottom: 24px; display: grid; width: 54px; height: 54px; place-items: center; border: 1px solid rgba(255,255,255,.2); border-radius: 50%; color: #fff; background: #25d366; box-shadow: 0 8px 28px rgba(37,211,102,.25); transition: transform 180ms ease; }
 .whatsapp-float:hover { transform: translateY(-3px) scale(1.03); }
+/* Ajustes de layout para telas médias e dispositivos móveis. */
 @media (max-width: 900px) {
   .section-wrap { width: min(calc(100% - 48px),760px); } .header-inner { width: calc(100% - 48px); }
   .hero-layout { grid-template-columns: minmax(0,1.1fr) minmax(210px,.8fr); gap: 4%; } .hero h1 { font-size: clamp(64px,10vw,94px); }
@@ -182,6 +190,7 @@ button,a { -webkit-tap-highlight-color: transparent; }
   .project-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .project-card:last-child { grid-column: 1/-1; min-height: 330px; }
   .contact-layout { gap: 40px; }
 }
+/* Navegação, colunas e espaçamentos reorganizados para celulares. */
 @media (max-width: 640px) {
   html { scroll-padding-top: 76px; } .section-wrap { width: calc(100% - 40px); } .section-block { padding-block: 78px; }
   .header-inner { width: calc(100% - 40px); height: 66px; } .wordmark { font-size: 19px; } .menu-toggle { display: inline-grid; }
@@ -211,6 +220,7 @@ button,a { -webkit-tap-highlight-color: transparent; }
   .section-wrap { width: calc(100% - 32px); } .hero h1 { font-size: 64px; } .hero-actions .button { padding-inline: 13px; font-size: 12px; }
   .stack-groups { grid-template-columns: 1fr; } .portrait-caption { font-size: 7px; }
 }
+/* Reduz animações quando essa preferência está ativa no sistema operacional. */
 @media (prefers-reduced-motion: reduce) {
   *,*::before,*::after { scroll-behavior: auto!important; animation-duration: .01ms!important; animation-iteration-count: 1!important; transition-duration: .01ms!important; }
 }
