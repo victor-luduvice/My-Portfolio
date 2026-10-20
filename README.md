@@ -2,20 +2,6 @@
 
 Portfólio pessoal estático desenvolvido com Next.js, TypeScript e Tailwind CSS.
 
-## Rodar localmente
-
-```bash
-npm install
-npm run dev
-```
-
-Acesse `http://localhost:3000`. Para conferir a versão de produção, rode `npm run build`.
-O build gera o site estático na pasta `out/`.
-
-## Editar conteúdo
-
-Textos, experiências, formação, tecnologias, projetos e links ficam em `src/data/content.ts`. Os projetos atuais são placeholders e precisam dos seus links e detalhes reais.
-
 ## Mapa do código
 
 ### Aplicação
@@ -40,8 +26,6 @@ Textos, experiências, formação, tecnologias, projetos e links ficam em `src/d
 - `src/components/sections/contact-section.tsx`: e-mail copiável, redes sociais e WhatsApp.
 - `src/components/sections/footer-section.tsx`: crédito do site e links sociais.
 
-Nos componentes React, as funções exportadas são as peças reutilizáveis da interface. As propriedades recebidas entre chaves (`{ ... }`) são parâmetros; valores criados com `useState` guardam estado interativo. Atributos como `id` ligam âncoras do menu às seções, `className` conecta o elemento ao CSS e atributos `aria-*` descrevem controles para tecnologias assistivas.
-
 ### Dados editáveis
 
 Em `src/data/content.ts`, `siteContent` centraliza todo o conteúdo:
@@ -65,13 +49,3 @@ Em `src/data/content.ts`, `siteContent` centraliza todo o conteúdo:
 - `next.config.ts`, `postcss.config.mjs` e `tailwind.config.ts`: configuração do Next.js, PostCSS e Tailwind.
 - `tsconfig.json`: opções do TypeScript e aliases de importação.
 - `public/`: recursos estáticos; `foto.jpg` é o retrato e `favicon.svg` é o ícone da aba.
-
-Os comentários junto ao código explicam estados, efeitos e comportamentos menos óbvios. Este mapa serve como índice para localizar cada responsabilidade sem repetir comentários em regras ou linhas autoexplicativas.
-
-## Trocar a foto
-
-Adicione sua foto como `public/foto.jpg`. Se o arquivo não existir ou não carregar, o layout mostra as iniciais `VL`.
-
-## Deploy na Vercel
-
-Importe o repositório na Vercel e use o comando de build padrão (`npm run build`). Antes do deploy, atualize `siteUrl` em `src/data/content.ts` para o domínio definitivo; esse endereço alimenta o sitemap e os metadados sociais.
