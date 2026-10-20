@@ -1,7 +1,5 @@
 # Victor Luduvice | Portfólio
 
-Portfólio pessoal estático desenvolvido com Next.js, TypeScript e Tailwind CSS.
-
 ## Mapa do código
 
 ### Aplicação
